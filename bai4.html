@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Numbers – Khi từng con số biết kể chuyện</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề phụ cho các card sau (nếu cần) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #007bff; /* Màu xanh dương */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* --- Tích hợp các style của bạn --- */
+
+      /* Khối code (Giữ lại style viền vàng JS của bạn) */
+      pre {
+        background: #f5f5f5;
+        border-left: 4px solid #f7df1e; /* Viền vàng đặc trưng của JS */
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      /* Code bên trong khối pre (Giữ lại màu hồng của bạn) */
+      pre code {
+        font-family: Consolas, monospace;
+        color: #d63384;
+        background: none; /* Bỏ nền trong suốt khi nằm trong pre */
+        padding: 0;
+      }
+
+      /* Code inline (nếu dùng ngoài pre) */
+      code {
+        font-family: Consolas, monospace;
+        color: #d63384;
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      /* Khung ghi chú (Giữ lại style màu xanh của bạn) */
+      .note {
+        background: #e7f5ff;
+        border-left: 4px solid #0d6efd; /* Viền xanh dương */
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+
+      /* Chữ highlight (Giữ lại style của bạn) */
+      .highlight {
+        color: #007acc;
+        font-weight: 600;
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <section class="card">
+        <h1>⚡ JavaScript Numbers – Khi từng con số biết kể chuyện</h1>
+        <p>
+          Trong JavaScript, <strong>mọi con số đều bình đẳng</strong> — dù là
+          <code>5</code>, <code>5.0</code>, hay <code>5000000</code>, tất cả đều
+          thuộc về cùng một kiểu: <strong>Number</strong>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Những con số kể chuyện</h2>
+        <pre><code>let speed = 299792458;  // tốc độ ánh sáng ✨
+let pi = 3.14159;      // con số hoàn hảo của hình tròn
+let dream = 1;         // chỉ cần một ước mơ để bắt đầu</code></pre>
+        <p>
+          Những con số không chỉ để tính toán — chúng là
+          <strong>biểu tượng của nỗ lực, thời gian và tiến bộ</strong>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Hành trình của con số</h2>
+        <p>
+          Mỗi dòng code bạn viết, mỗi vòng lặp bạn chạy, đều là
+          <span class="highlight">bước tiến từ số 0 lên vô hạn.</span>
+        </p>
+
+        <div class="note">
+          “Không quan trọng bạn bắt đầu từ 0 hay 100 — quan trọng là bạn đang
+          tiến lên từng con số một.”
+        </div>
+
+        <p>
+          Vì lập trình không chỉ là công trừ nhân chia, mà là hành trình biến
+          <strong>những con số vô tri</strong> thành
+          <strong>những điều có ý nghĩa.</strong>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Từ con số đến kết quả</h2>
+        <p>
+          Hãy cứ viết code, hãy cứ tính toán — vì một ngày nào đó, những con số
+          bạn viết hôm nay sẽ trở thành
+          <strong>kết quả lớn nhất của cuộc đời bạn</strong> 🚀
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

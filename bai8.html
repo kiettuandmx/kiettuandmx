@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post - Java Math Class</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề của mỗi card (mục lớn) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #007bff; /* Màu xanh dương (chủ đề Java) */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* Khối code (Viền xanh Java) */
+      pre {
+        background: #f5f5f5; /* Nền xám nhạt cho code */
+        border-left: 4px solid #007bff; /* Viền xanh Java */
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: Consolas, "Courier New", monospace;
+      }
+
+      /* Code bên trong khối pre */
+      pre code {
+        font-family: Consolas, "Courier New", monospace;
+        color: #333; /* Màu chữ code mặc định */
+        background: none;
+        padding: 0;
+      }
+
+      /* Code inline (nằm trong câu) */
+      code {
+        font-family: Consolas, "Courier New", monospace;
+        color: #d63384; /* Màu hồng (giữ theo style cũ của bạn) */
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <section class="card">
+        <h1>Math Không Phải Môn Học, Nó Là "Gia Vị" Sáng Tạo</h1>
+        <p>
+          Hãy quên các định nghĩa phức tạp đi. Hãy nghĩ xem bạn có thể làm gì
+          với nó:
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>1. Thổi Hồn Cho Sự Ngẫu Nhiên (Math.random) 🎮</h2>
+        <p>
+          Bạn muốn làm một game? Làm sao để quái vật xuất hiện ngẫu nhiên? Làm
+          sao để tung một con xúc xắc? Làm sao để tạo ra một chướng ngại vật bất
+          ngờ?
+        </p>
+        <p>
+          Chính là <code>Math.random()</code>! Đây là công cụ tạo ra sự hỗn loạn
+          có kiểm soát, là "hạt giống" của sự bất ngờ. Không có nó, mọi trò chơi
+          đều trở nên nhàm chán và dễ đoán. Bạn đang nắm trong tay khả năng tạo
+          ra sự may rủi.
+        </p>
+        <pre><code class="language-java">// Lấy một số ngẫu nhiên từ 1 đến 10 (ví dụ: tung xúc xắc 10 mặt)
+int diceRoll = (int) (Math.random() * 10) + 1;
+System.out.println("Bạn đã tung ra số: " + diceRoll);</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>2. Quyền Năng Định Hình Thế Giới (sqrt, pow, PI)</h2>
+        <p>
+          Bạn muốn vẽ một vòng tròn hoàn hảo? Bạn cần <code>Math.PI</code> (số
+          Pi $3.14159...$).
+        </p>
+        <p>
+          Bạn muốn tính khoảng cách giữa người chơi và kẻ thù trên bản đồ 2D?
+          (Định lý Pytago). Bạn cần <code>Math.sqrt()</code> (căn bậc hai) và
+          <code>Math.pow()</code> (lũy thừa).
+        </p>
+        <p>
+          Đây chính là vật lý của thế giới game. Bạn không cần tự mình "phát
+          minh" ra cách tính căn bậc hai. Java đã làm sẵn cho bạn. Việc của bạn
+          là sử dụng sức mạnh đó để xây dựng.
+        </p>
+        <pre><code class="language-java">// Tính khoảng cách giữa 2 điểm (x1, y1) và (x2, y2)
+double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>3. Khả Năng Kiểm Soát Tuyệt Đối (max, min, abs)</h2>
+        <p>
+          Trong mọi chương trình, bạn luôn cần đưa ra quyết định dựa trên các
+          con số.
+        </p>
+        <ul>
+          <li>
+            "Làm sao tìm ra người chơi có điểm cao nhất?" -&gt;
+            <code>Math.max()</code>
+          </li>
+          <li>
+            "Làm sao đảm bảo thanh máu không bao giờ xuống dưới 0?" -&gt;
+            <code>Math.max(0, currentHealth)</code>
+          </li>
+          <li>
+            "Tôi chỉ quan tâm khoảng cách, không quan tâm âm hay dương." -&gt;
+            <code>Math.abs()</code> (Giá trị tuyệt đối)
+          </li>
+        </ul>
+        <p>
+          Đây là những công cụ giúp bạn kiểm soát luồng logic, đảm bảo chương
+          trình của bạn chạy chính xác và mạnh mẽ.
+        </p>
+        <pre><code class="language-java">// Tìm điểm cao nhất trong 3 vòng chơi
+int round1 = 150;
+int round2 = 90;
+int round3 = 200;
+int highScore = Math.max(round1, Math.max(round2, round3));
+System.out.println("Điểm cao nhất là: " + highScore); // Output: 200</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Đừng Chỉ Code, Hãy Kiến Tạo! 🔥</h2>
+        <p>
+          Lớp <code>Math</code> trong Java nhắc nhở chúng ta một điều: Lập trình
+          không phải là làm lại từ đầu. Lập trình là đứng trên vai những người
+          khổng lồ.
+        </p>
+        <p>
+          Bạn không cần phải là một nhà toán học để sử dụng <code>Math</code>.
+          Bạn chỉ cần là một người giải quyết vấn đề. Java đã trao cho bạn những
+          công cụ sắc bén nhất.
+        </p>
+        <p>
+          Vì vậy, lần tới khi bạn thấy <code>Math</code>, đừng né tránh. Hãy mỉm
+          cười và tự hỏi: "Với sức mạnh này, mình có thể sáng tạo ra điều gì?"
+        </p>
+        <p>
+          Hãy dùng <code>Math</code> để tạo ra một hiệu ứng hình ảnh mượt mà,
+          một mô phỏng vật lý thực tế, hay một ứng dụng tài chính chính xác. Đam
+          mê của bạn là nhiên liệu. <code>Math</code> là động cơ. Hãy khởi động
+          nó!
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

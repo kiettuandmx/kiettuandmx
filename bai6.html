@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post - Boolean Expressions</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám rất nhạt */
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 700px; /* Chiều rộng tối đa cho bài blog */
+        width: 100%;
+      }
+
+      /* --- Đây là phần quan trọng: Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff; /* Nền trắng */
+        border-radius: 12px; /* Bo góc */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+        padding: 24px; /* Khoảng cách bên trong */
+        margin-bottom: 20px; /* Khoảng cách giữa các card */
+      }
+
+      /* Tiêu đề chính của bài viết */
+      h1 {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-top: 0;
+      }
+
+      /* Tiêu đề của mỗi card (mục lớn) */
+      h2 {
+        font-size: 1.5rem;
+        color: #16a085; /* Màu nhấn */
+        border-bottom: 2px solid #ecf0f1; /* Đường gạch chân mờ */
+        padding-bottom: 8px;
+        margin-top: 0;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+      }
+
+      /* Định dạng khối code (JS) */
+      pre {
+        background-color: #2d2d2d; /* Nền đen cho code */
+        color: #f8f8f2; /* Chữ trắng */
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto; /* Cho phép cuộn ngang nếu code quá dài */
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      /* Định dạng code inline (nằm trong câu) */
+      code {
+        background-color: #ecf0f1; /* Nền xám nhạt */
+        color: #e74c3c; /* Màu chữ đỏ */
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      /* Định dạng câu hỏi cuối cùng */
+      .final-question {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .choice {
+        font-size: 1.1rem;
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <section class="card">
+        <h1>
+          JavaScript Boolean Expressions – Khi cuộc sống chỉ có “Đúng” hoặc
+          “Sai”
+        </h1>
+        <p>
+          Trong lập trình, đôi khi mọi thứ được chia ra thật đơn giản: true hoặc
+          false. Nhưng đằng sau hai giá trị đó là cả một thế giới của lựa chọn,
+          logic và niềm tin.
+        </p>
+        <pre><code>let isLearning = true;
+let isGivingUp = false;
+
+if (isLearning && !isGivingUp) {
+    console.log("Bạn đang tiến gần đến giấc mơ rồi 🚀");
+}</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>💡 Boolean Expressions dạy ta rằng:</h2>
+        <p>
+          Cuộc sống cũng giống như code — chỉ cần
+          <strong>một điều đúng</strong>, mọi thứ sẽ tiếp tục chạy.
+        </p>
+        <p>
+          Đôi khi, bạn thấy mọi thứ khó, code lỗi liên tục, nhưng chỉ cần
+          <strong>một dòng đúng</strong>, mọi bug đều có thể biến mất.
+        </p>
+        <p>
+          Trong code: <code>true && !false</code> → chạy được.
+          <br />
+          Trong đời: <strong>niềm tin && không bỏ cuộc</strong> → bạn sẽ đi xa.
+          🌟
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>🎯 Kết luận</h2>
+        <p>
+          Lập trình không chỉ là viết ra những dòng logic, mà còn là
+          <strong>học cách nhìn cuộc sống qua góc nhìn của 0 và 1</strong>.
+        </p>
+        <p>
+          Boolean dạy ta rằng, dù có hàng ngàn khả năng ngoài kia, chỉ cần bạn
+          giữ cho mình một điều “đúng” – một hướng đi rõ ràng, bạn đã hơn nửa
+          đường đến thành công rồi 💪
+        </p>
+      </section>
+
+      <section class="card">
+        <p>Vì cuối cùng, trong cả code lẫn cuộc đời, chỉ có hai lựa chọn:</p>
+        <p class="choice">Bỏ cuộc (false) ❌</p>
+        <p class="choice">hoặc Tiếp tục (true) ❤️‍🔥</p>
+
+        <p class="final-question">Bạn chọn cái nào? 🫵</p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

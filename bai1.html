@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Syntax – Dòng Code Đầu Tiên</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề phụ (cho các card sau) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #007bff; /* Màu xanh dương (chủ đề Java) */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* --- Tích hợp các style của bạn --- */
+
+      /* Khối code (Viền xanh Java của bạn) */
+      pre {
+        background: #f5f5f5;
+        border-left: 4px solid #007acc; /* Giữ style của bạn */
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      /* Code bên trong khối pre (chỉnh lại màu cho dễ đọc) */
+      pre code {
+        font-family: Consolas, monospace;
+        color: #333; /* Màu chữ đen/xám đậm trong khối code */
+        background: none;
+        padding: 0;
+      }
+
+      /* Code inline (nằm trong câu - Giữ màu hồng của bạn) */
+      code {
+        font-family: Consolas, monospace;
+        color: #d63384; /* Giữ style của bạn */
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      /* Highlight (Giữ style của bạn) */
+      .highlight {
+        color: #007acc; /* Giữ style của bạn */
+        font-weight: 600;
+      }
+
+      /* Ghi chú (Giữ style của bạn) */
+      .note {
+        background: #fff3cd; /* Giữ style của bạn */
+        border-left: 4px solid #ffc107; /* Giữ style của bạn */
+        padding: 15px; /* Tăng padding một chút */
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <!-- CARD 1: Giới thiệu & Code -->
+      <section class="card">
+        <h1>
+          💻 JAVA SYNTAX – Dòng Code Đầu Tiên, Khởi Nguồn Cả Một Hành Trình
+        </h1>
+        <p>
+          Mỗi lập trình viên đều bắt đầu bằng một dòng lệnh nhỏ — và với Java,
+          đó là:
+        </p>
+
+        <pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+      </section>
+
+      <!-- CARD 2: Triết lý -->
+      <section class="card">
+        <h2>Triết lý đằng sau cú pháp</h2>
+        <p>
+          Ngắn gọn, đơn giản, nhưng
+          <strong>ẩn chứa cả một triết lý lập trình</strong>.
+        </p>
+        <p>
+          Dòng <code>public class Main</code> dạy ta rằng:
+          <em>mọi thứ bắt đầu từ một cấu trúc rõ ràng</em>.<br />
+          Dòng <code>public static void main</code> nói rằng:
+          <em>mọi chương trình đều cần một điểm khởi đầu</em>.<br />
+          Và <code>System.out.println("Hello, World!");</code> — là
+          <em>tiếng chào đầu tiên với thế giới công nghệ</em>.
+        </p>
+      </section>
+
+      <!-- CARD 3: Tư duy & Kết luận -->
+      <section class="card">
+        <h2>Tư duy của Kỹ sư</h2>
+        <p>
+          Java có cú pháp nghiêm ngặt, đôi khi khiến người mới nản. Nhưng chính
+          sự nghiêm túc đó rèn cho bạn
+          <span class="highlight">tư duy kỷ luật</span> và
+          <span class="highlight">logic chuyên nghiệp</span> như một kỹ sư thực
+          thụ.
+        </p>
+
+        <div class="note">
+          💡 Khi bạn hiểu được cú pháp, bạn không chỉ đang học Java — bạn đang
+          học cách suy nghĩ như một lập trình viên.
+        </div>
+
+        <p>
+          Cứ kiên trì. Mỗi dòng code bạn viết hôm nay sẽ là viên gạch nhỏ xây
+          nên tương lai của bạn ngày mai.<br />
+          Và biết đâu, dòng
+          <code>System.out.println("Hello, World!");</code> hôm nay...<br />
+          sẽ là <strong>“Hello, Success!”</strong> của bạn trong tương lai 🚀
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

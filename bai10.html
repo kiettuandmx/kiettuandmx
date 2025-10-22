@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Strings – Linh Hồn Của Ứng Dụng</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #1d4ed8; /* Xanh dương đậm hơn */
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề phụ (cho các card sau) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #f7df1e; /* Màu vàng (chủ đề JS) */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Tiêu đề H3 cho các "siêu năng lực" */
+      .card h3 {
+        font-size: 1.3rem;
+        color: #16a085; /* Màu xanh lá */
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* Khối code (Viền vàng JS) */
+      pre {
+        background: #f5f5f5;
+        border-left: 4px solid #f7df1e;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      /* Code bên trong khối pre */
+      pre code {
+        font-family: Consolas, monospace;
+        color: #333; /* Màu chữ code trong pre */
+        background: none;
+        padding: 0;
+      }
+
+      /* Code inline (nằm trong câu - màu hồng) */
+      code {
+        font-family: Consolas, monospace;
+        color: #d63384;
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      /* Định dạng danh sách */
+      .card ul {
+        padding-left: 20px;
+        margin-top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <!-- CARD 1: Giới thiệu -->
+      <section class="card">
+        <h1>JavaScript Strings: Linh Hồn Của Ứng Dụng 🗣️</h1>
+        <p>
+          Chào mừng những chiến binh code! 🚀 Khi bạn bắt đầu hành trình với
+          JavaScript, bạn sẽ làm quen với numbers, booleans, và... Strings
+          (Chuỗi).
+        </p>
+        <p>
+          Rất nhiều người mới nhìn vào Strings và nghĩ: "À, nó chỉ là một mớ văn
+          bản thôi mà." Nhưng nếu bạn là một người có đam mê, hãy nhìn lại.
+          Strings không chỉ là "chữ".
+        </p>
+        <p>
+          <strong>Strings chính là LINH HỒN của ứng dụng của bạn.</strong>
+        </p>
+        <p>
+          Nếu code logic là bộ não 🧠, thì Strings chính là giọng nói 🗣️. Đó là
+          cách duy nhất mà bộ não (code) của bạn có thể giao tiếp với thế giới
+          bên ngoài (người dùng).
+        </p>
+      </section>
+
+      <!-- CARD 2: Strings là Trải Nghiệm -->
+      <section class="card">
+        <h2>Không Chỉ Là Dữ Liệu, Đó Là Trải Nghiệm</h2>
+        <p>
+          Mọi thứ bạn thấy và yêu thích trên web đều được "sơn" bằng Strings:
+        </p>
+        <ul>
+          <li>"Chào mừng trở lại, Hùng!"</li>
+          <li>"Mật khẩu của bạn không chính xác. Vui lòng thử lại."</li>
+          <li>"Bạn có 3 tin nhắn mới."</li>
+          <li>"Mua ngay!"</li>
+        </ul>
+        <p>
+          Một String được chế tác tốt là sự khác biệt giữa một ứng dụng vô cảm
+          và một người bạn đồng hành hữu ích. Và JavaScript trao cho bạn toàn bộ
+          "xưởng nghệ thuật" 🎨 để làm chủ "giọng nói" này.
+        </p>
+      </section>
+
+      <!-- CARD 3: Siêu năng lực 1 & 2 -->
+      <section class="card">
+        <h2>Giải Phóng "Siêu Năng Lực" Của Strings (Phần 1)</h2>
+        <p>Đừng chỉ lưu trữ văn bản. Hãy điều khiển nó!</p>
+
+        <h3>1. Năng Lực "Nhà Điêu Khắc": Biến Hóa Hình Dạng 🎨</h3>
+        <p>Bạn nhận được dữ liệu lộn xộn từ người dùng? Hãy tạc lại nó!</p>
+        <ul>
+          <li><code>.toUpperCase()</code>: "hello" ➡️ "HELLO" (Hét lên!)</li>
+          <li>
+            <code>.toLowerCase()</code>: "GOODBYE" ➡️ "goodbye" (Thì thầm)
+          </li>
+          <li>
+            <code>.trim()</code>: " alex@email.com " ➡️ "alex@email.com" (Cắt bỏ
+            sự bừa bộn!)
+          </li>
+        </ul>
+        <p>
+          Bạn không chỉ nhận dữ liệu, bạn đang chuẩn hóa nó. Bạn đang biến sự
+          hỗn loạn thành trật tự.
+        </p>
+        <pre><code>// Biến một cái tên nhập vội vàng thành định dạng chuẩn
+let input = "   ngUYỄn vĂn A   ";
+let formattedName = input.trim().toLowerCase(); // "nguyễn văn a"
+// -> Sẵn sàng để lưu vào database!</code></pre>
+
+        <h3>2. Năng Lực "Nhà Thám Tử": Tìm Kiếm Và Khám Phá 🕵️</h3>
+        <p>
+          Một String là một thế giới nhỏ. JavaScript cho bạn kính lúp để khám
+          phá nó.
+        </p>
+        <ul>
+          <li><code>.includes('@')</code>: "Email này có hợp lệ không?"</li>
+          <li>
+            <code>.startsWith('http://')</code>: "Đây có phải là một link web
+            không?"
+          </li>
+          <li>
+            <code>.indexOf('lỗi')</code>: "Thông báo này có phải là một cảnh báo
+            lỗi không?"
+          </li>
+        </ul>
+        <p>
+          Bạn đang đặt câu hỏi cho dữ liệu của mình. Bạn đang tìm kiếm ý nghĩa
+          bên trong văn bản.
+        </p>
+      </section>
+
+      <!-- CARD 4: Siêu năng lực 3 & Phép thuật -->
+      <section class="card">
+        <h2>Giải Phóng "Siêu Năng Lực" Của Strings (Phần 2)</h2>
+
+        <h3>3. Năng Lực "Phẫu Thuật": Cắt Và Ghép ✂️</h3>
+        <p>Bạn không cần toàn bộ câu. Bạn chỉ cần phần quan trọng nhất.</p>
+        <ul>
+          <li>
+            <code>.slice(0, 10)</code>: Lấy 10 ký tự đầu tiên để làm đoạn xem
+            trước (preview).
+          </li>
+          <li>
+            <code>.split(' ')</code>: Biến "Chào mừng bạn" ➡️ ['Chào', 'mừng',
+            'bạn'].
+          </li>
+        </ul>
+        <p>
+          Bạn đang chiết xuất giá trị. Bạn đang chia nhỏ vấn đề lớn thành những
+          phần dễ quản lý hơn.
+        </p>
+
+        <h3>Phép Thuật Tối Thượng: Template Literals (``)</h3>
+        <p>Đây là thứ sẽ thay đổi cách bạn viết code mãi mãi.</p>
+
+        <p><strong>Cách "cổ điển" (mệt mỏi):</strong></p>
+        <pre><code>let user = "Minh";
+let items = 3;
+let message = "Chào " + user + ", bạn có " + items + " sản phẩm trong giỏ hàng.";
+// Rất nhiều dấu '+' và dấu ' ' rắc rối!</code></pre>
+
+        <p><strong>Cách của "Pháp Sư" (Template Literals):</strong></p>
+        <pre><code>let user = "Minh";
+let items = 3;
+let message = `Chào ${user}, bạn có ${items} sản phẩm trong giỏ hàng.`;</code></pre>
+
+        <p>
+          Thấy sự khác biệt không? Bằng cách dùng dấu <code>`</code> (backtick),
+          bạn có thể đưa thẳng biến vào bên trong chuỗi với cú pháp
+          <code>${...}</code>. Nó sạch sẽ. Nó dễ đọc. Nó cho phép bạn viết ra
+          những thông điệp phức tạp một cách thanh lịch.
+        </p>
+        <p>
+          Đây là lúc bạn thực sự thổi hồn vào code, dệt logic của bạn vào trong
+          ngôn ngữ của con người.
+        </p>
+      </section>
+
+      <!-- CARD 5: Kết luận -->
+      <section class="card">
+        <h2>Đừng Chỉ Học "Strings" – Hãy Học Cách Giao Tiếp</h2>
+        <p>
+          Mỗi khi bạn viết một String, hãy tự hỏi: "Người dùng của mình sẽ cảm
+          thấy thế nào khi đọc dòng này?"
+        </p>
+        <p>
+          Làm chủ Strings không chỉ là làm chủ cú pháp. Đó là bước đầu tiên để
+          làm chủ Trải Nghiệm Người Dùng (User Experience).
+        </p>
+        <p>
+          Bây giờ, hãy ra ngoài kia và làm cho ứng dụng của bạn "cất tiếng nói"!
+        </p>
+      </section>
+
+      <!-- NÚT QUAY LẠI -->
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

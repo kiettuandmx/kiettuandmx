@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post - Java TreeSet</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề của mỗi card (mục lớn) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #007bff; /* Màu xanh dương (chủ đề Java) */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Tiêu đề phụ (cho 2 siêu năng lực) */
+      .card h3 {
+        font-size: 1.3rem;
+        color: #16a085; /* Màu xanh lá */
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* Code inline (nằm trong câu) */
+      code {
+        font-family: Consolas, "Courier New", monospace;
+        color: #d63384; /* Màu hồng */
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      /* Định dạng danh sách (cho các ứng dụng) */
+      .card ul {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+
+      .card li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 5px;
+      }
+
+      .card li strong {
+        font-size: 1.1rem;
+        color: #333;
+        display: block; /* Giúp emoji và tiêu đề nằm trên 1 dòng */
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <section class="card">
+        <h1>TreeSet: Khi "Trật Tự" Là Niềm Đam Mê</h1>
+        <p>
+          Hãy tưởng tượng bạn có một đống sách (dữ liệu). Bạn muốn xếp chúng lên
+          kệ.
+        </p>
+        <p>
+          <code>ArrayList</code> giống như bạn... vứt sách bừa bãi lên sàn. Cuốn
+          nào đến trước nằm trước.
+        </p>
+        <p>
+          <code>HashSet</code> giống như bạn ném chúng vào một cái rương. Nhanh,
+          nhưng khi mở ra, bạn chẳng biết cuốn nào ở đâu.
+        </p>
+        <p>
+          Nhưng <code>TreeSet</code>? Ồ, <code>TreeSet</code> là một level khác.
+          Bạn chỉ cần "đưa" cuốn sách cho nó. Nó tự động tìm đúng vị trí và xếp
+          cuốn sách đó lên kệ theo thứ tự A-B-C.
+        </p>
+        <p>
+          Bạn đưa "Táo", rồi "Chuối", rồi "Cam". Trên kệ sẽ luôn là: "Cam",
+          "Chuối", "Táo". Bạn không cần làm gì cả. Nó chỉ xảy ra thôi. Đó chính
+          là sự thanh lịch.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Hai Lời Hứa Vàng Của TreeSet 💎</h2>
+        <p>
+          Khi bạn chọn <code>TreeSet</code>, nó trao cho bạn 2 "siêu năng lực"
+          mà không đòi hỏi bạn phải tốn sức:
+        </p>
+
+        <h3>1. Siêu Năng Lực "Không Trùng Lặp"</h3>
+        <p>
+          <code>TreeSet</code> là một <code>Set</code> (Tập hợp). Điều đó có
+          nghĩa là nó không chấp nhận sự lặp lại. Nếu bạn cố thêm "Táo" vào
+          chiếc kệ đã có "Táo", nó sẽ lịch sự nói: "Cảm ơn, chúng ta đã có rồi."
+        </p>
+        <p>
+          ➡️ <strong>Ứng dụng:</strong> Bạn muốn đếm số từ duy nhất trong một
+          văn bản? Ném tất cả vào <code>TreeSet</code>!
+        </p>
+
+        <h3>2. Siêu Năng Lực "Tự Động Sắp Xếp" 🌟</h3>
+        <p>
+          Đây là thứ khiến <code>TreeSet</code> trở nên đặc biệt. Mọi thứ bạn
+          thêm vào ngay lập tức được đặt vào đúng vị trí của nó.
+        </p>
+        <ul>
+          <li>Với Số: 1, 5, 10, 100...</li>
+          <li>Với Chữ: "Apple", "Banana", "Orange"...</li>
+        </ul>
+        <p>
+          <strong>Tại sao điều này lại truyền cảm hứng?</strong>
+          Bởi vì nó giải phóng bạn khỏi công việc nhàm chán! Bạn không cần viết
+          code để sắp xếp. Bạn không cần gọi <code>Collections.sort()</code> mỗi
+          lần thêm một thứ gì đó.
+        </p>
+        <p>
+          Bạn chỉ cần tập trung vào logic sáng tạo của mình.
+          <code>TreeSet</code> lo phần "dọn dẹp". Viết code thông minh hơn,
+          không phải vất vả hơn.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Khi Nào "Chiếc Kệ Ma Thuật" Này Tỏa Sáng?</h2>
+        <p>
+          Đam mê lập trình không chỉ là viết code chạy được, mà còn là viết code
+          đẹp và hiệu quả. Hãy nghĩ về những kịch bản này:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Bảng Xếp Hạng Game (Leaderboard): 🏆</strong>
+            Bạn có điểm của 1000 người chơi. Bạn ném tất cả vào
+            <code>TreeSet&lt;Integer&gt;</code>. Bạn muốn biết điểm cao nhất?
+            Chỉ cần gọi <code>treeSet.last()</code>. Xong! Luôn luôn là điểm cao
+            nhất.
+          </li>
+          <li>
+            <strong>Từ Điển hoặc Danh Bạ: 📒</strong>
+            Bạn đang xây dựng một danh bạ điện thoại. Bạn muốn tên người dùng
+            luôn được sắp xếp theo A-B-C để dễ tìm?
+            <code>TreeSet&lt;User&gt;</code> chính là thứ bạn cần.
+          </li>
+          <li>
+            <strong>Lịch Trình Sự Kiện: 🗓️</strong>
+            Bạn có một danh sách các sự kiện với các mốc thời gian khác nhau.
+            <code>TreeSet</code> sẽ tự động sắp xếp chúng theo thứ tự thời gian
+            cho bạn.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Đằng Sau "Phép Thuật"</h2>
+        <p>
+          Đằng sau "phép thuật" đó là một cấu trúc dữ liệu mạnh mẽ (<code
+            >Red-Black Tree</code
+          >), nhưng bạn chưa cần bận tâm. Bạn chỉ cần biết rằng: nó nhanh, ổn
+          định và tin cậy.
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

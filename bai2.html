@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Statements – Mỗi dòng code là một câu chuyện</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      /* --- Cài đặt CSS Tối Giản (Phong cách Card) --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám nhạt */
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px;
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề phụ (cho các card sau) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #f7df1e; /* Màu vàng (chủ đề JS) */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* --- Tích hợp các style của bạn --- */
+
+      /* Khối code (Viền vàng JS của bạn) */
+      pre {
+        background: #f5f5f5;
+        border-left: 4px solid #f7df1e; /* Giữ style của bạn */
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      /* Code bên trong khối pre (chỉnh lại màu cho dễ đọc) */
+      pre code {
+        font-family: Consolas, monospace;
+        color: #333;
+        background: none;
+        padding: 0;
+      }
+
+      /* Code inline (nằm trong câu - Giữ màu hồng của bạn) */
+      code {
+        font-family: Consolas, monospace;
+        color: #d63384; /* Giữ style của bạn */
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      /* Ghi chú (Giữ style của bạn) */
+      .note {
+        background: #e7f5ff; /* Giữ style của bạn */
+        border-left: 4px solid #0d6efd; /* Giữ style của bạn */
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+        /* Giữ các style font đặc biệt của bạn */
+        font-weight: 700;
+        font-size: 1.5rem; /* Điều chỉnh lại từ 26px để dễ đọc hơn */
+        line-height: 1.6;
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <!-- CARD 1: Giới thiệu & Code -->
+      <section class="card">
+        <h1>⚡ JavaScript Statements – Mỗi dòng code là một câu chuyện</h1>
+        <p>
+          Trong JavaScript, <strong>mỗi dòng code</strong> được gọi là
+          <em>một statement</em> — giống như mỗi hành động nhỏ tạo nên cả cuộc
+          hành trình lớn 🌱
+        </p>
+        <p>Ví dụ đơn giản:</p>
+        <pre><code>let name = "Nguyễn Văn A";
+console.log("Xin chào " + name);</code></pre>
+      </section>
+
+      <!-- CARD 2: Triết lý -->
+      <section class="card">
+        <h2>Mảnh ghép tư duy</h2>
+        <p>
+          Đây không chỉ là hai câu lệnh — đó là
+          <strong>lời chào đầu tiên của bạn với thế giới lập trình.</strong>
+        </p>
+        <p>
+          Statement là những <em>mảnh ghép tư duy</em>, mỗi dòng bạn viết là một
+          quyết định, một ý tưởng được cụ thể hóa.
+        </p>
+        <p>
+          Từng dấu chấm phẩy, từng dòng <code>if</code>, <code>for</code>,
+          <code>let</code>
+          là cách bạn ra lệnh cho máy tính hiểu suy nghĩ của mình 🧠💡
+        </p>
+      </section>
+
+      <!-- CARD 3: Ghi chú & Kết luận -->
+      <section class="card">
+        <h2>Học từ những lỗi sai</h2>
+        <p>
+          Đừng lo nếu ban đầu mọi thứ rối tung lên. JavaScript sẽ dạy bạn rằng:
+        </p>
+
+        <div class="note">
+          “Chỉ cần viết, sai cũng được — vì từng dòng code sai là một bước gần
+          hơn đến điều đúng.”
+        </div>
+
+        <p>
+          Cứ viết đi, cứ thử đi. Vì biết đâu, statement hôm nay chỉ là
+          <code>console.log("Hello World")</code>, nhưng ngày mai, nó sẽ là
+          <strong>một ứng dụng khiến thế giới phải WOW!</strong> 🚀
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>

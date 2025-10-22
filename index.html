@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog của Tôi</title>
+
+    <!-- KHÔNG CÒN SCRIPT CỦA TAILWIND CSS -->
+
+    <style>
+      /* Thêm font Inter từ Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+      /* --- CSS THUẦN (Pure CSS) --- */
+
+      /* Reset cơ bản */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background-color: #4f6c88; /* Tương đương bg-gray-50 */
+        color: #1f2937; /* Màu chữ cơ bản */
+      }
+
+      /* --- Header --- */
+      header {
+        background-color: #2db4dd;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+        padding: 3rem 0; /* py-12 */
+        text-align: center;
+      }
+
+      .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2.25rem; /* text-4xl */
+        line-height: 2.5rem;
+        font-weight: 800; /* font-extrabold */
+        color: #1f2937; /* text-gray-800 */
+      }
+
+      header p {
+        font-size: 1.25rem; /* text-xl */
+        line-height: 1.75rem;
+        color: #4b5563; /* text-gray-600 */
+        margin-top: 0.5rem; /* mt-2 */
+      }
+
+      .home-button {
+        display: inline-block;
+        margin-top: 1.5rem; /* mt-6 */
+        background-color: #2563eb; /* bg-blue-600 */
+        color: #ffffff;
+        font-weight: 600; /* font-semibold */
+        padding: 0.5rem 1.25rem; /* px-5 py-2 */
+        border-radius: 0.5rem; /* rounded-lg */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .home-button:hover {
+        background-color: #1d4ed8; /* hover:bg-blue-700 */
+        transform: translateY(-2px); /* hover:-translate-y-0.5 */
+      }
+
+      /* --- Main Content --- */
+      main.container {
+        max-width: 64rem; /* max-w-5xl */
+        padding-top: 2rem; /* p-8 (lấy giá trị md) */
+        padding-bottom: 2rem;
+      }
+
+      /* Tiêu đề danh sách bài viết */
+      #post-list h2 {
+        font-size: 1.875rem; /* text-3xl */
+        line-height: 2.25rem;
+        font-weight: 700; /* font-bold */
+        color: #1f2937; /* text-gray-800 */
+        margin-bottom: 2rem; /* mb-8 */
+        text-align: center;
+        border-bottom: 2px solid #e5e7eb; /* border-b-2 border-gray-200 */
+        padding-bottom: 1rem; /* pb-4 */
+      }
+
+      /* Lưới bài viết */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+        gap: 2rem; /* gap-8 */
+      }
+
+      /* Responsive cho 2 cột */
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+        }
+      }
+
+      /* --- Thẻ Bài Viết (Post Item Card) --- */
+      .post-item {
+        background-color: #ffffff;
+        border-radius: 0.75rem; /* rounded-xl */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+        overflow: hidden;
+        transition: all 0.3s ease-in-out; /* transition-all duration-300 */
+      }
+
+      .post-item:hover {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* hover:shadow-2xl */
+        transform: translateY(-4px); /* hover:-translate-y-1 */
+      }
+
+      .post-item .p-6 {
+        padding: 1.5rem; /* p-6 */
+      }
+
+      .post-item h3 a {
+        display: block;
+        margin-bottom: 0.75rem; /* mb-3 */
+        font-size: 1.5rem; /* text-2xl */
+        line-height: 2rem;
+        font-weight: 700; /* font-bold */
+        color: #111827; /* text-gray-900 */
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .post-item:hover h3 a {
+        color: #2563eb; /* group-hover:text-blue-600 */
+      }
+
+      .post-item p {
+        color: #4b5563; /* text-gray-600 */
+        font-size: 1rem; /* text-base */
+        line-height: 1.5rem;
+      }
+
+      /* --- Footer --- */
+      footer {
+        text-align: center;
+        padding-top: 2rem; /* py-8 */
+        padding-bottom: 2rem;
+        margin-top: 3rem; /* mt-12 */
+        border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
+        background-color: #4da4eb;
+      }
+
+      footer p {
+        color: #6b7280; /* text-gray-500 */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- HEADER: Giữ nguyên cấu trúc HTML, bỏ class Tailwind -->
+    <header>
+      <div class="container">
+        <h1>Blog của Tôi</h1>
+        <p>Nơi chia sẻ những kinh nghiệm và kiến thức.</p>
+        <a href="index.html" class="home-button"> 👈 Quay về trang chủ </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- danh sach bai học (Giữ nguyên) -->
+      <!-- <section id="lesson-list" ...>
+        ...
+      </section> -->
+
+      <!-- DANH SÁCH BÀI VIẾT: Giữ nguyên HTML, bỏ class Tailwind -->
+      <section id="post-list">
+        <h2>Các bài viết mới nhất</h2>
+
+        <div class="grid">
+          <!-- 1. JAVA SYNTAX -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai1.html"> 💻 JAVA SYNTAX☕ </a>
+              </h3>
+              <p>- DÒNG CODE ĐẦU TIÊN, KHỞI NGUỒN CẢ MỘT HÀNH TRÌNH🤔</p>
+            </div>
+          </article>
+
+          <!-- 2. JavaScript Statements -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai2.html"> 💬 JavaScript Statements⚡ </a>
+              </h3>
+              <p>- MỖI DÒNG CODE LÀ MỘT CÂU CHUYỆN...</p>
+            </div>
+          </article>
+
+          <!-- 3. JavaScript Sets -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai3.html"> 💡 JavaScript Sets </a>
+              </h3>
+              <p>- Nơi mọi giá trị đều được tôn trọng một lần duy nhất</p>
+            </div>
+          </article>
+
+          <!-- 4. JavaScript Numbers -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai4.html"> ⚡ JavaScript Numbers </a>
+              </h3>
+              <p>- Khi từng con số biết kể chuyện</p>
+            </div>
+          </article>
+
+          <!-- 5. JavaScript Operators -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai5.html"> 🌿 JavaScript Operators </a>
+              </h3>
+              <p>- Khi những dấu nhỏ tạo nên sức mạnh lớn</p>
+            </div>
+          </article>
+
+          <!-- 6. JavaScript Boolean Expressions -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai6.html"> 🌟 JavaScript Boolean Expressions </a>
+              </h3>
+              <p>- Khi cuộc sống chỉ có “Đúng” hoặc “Sai”</p>
+            </div>
+          </article>
+
+          <!-- 7. Java Data Types -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai7.html"> Java Data Types </a>
+              </h3>
+              <p>
+                Đây là bài viết đầu tiên trên blog của tôi, đánh dấu một khởi
+                đầu mới trên hành trình viết lách và chia sẻ...
+              </p>
+            </div>
+          </article>
+
+          <!-- 8. Math -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai8.html">
+                  Math Không Phải Môn Học, Nó Là "Gia Vị" Sáng Tạo
+                </a>
+              </h3>
+              <p>
+                Hãy quên các định nghĩa phức tạp đi. Hãy nghĩ xem bạn có thể làm
+                gì với nó:
+              </p>
+            </div>
+          </article>
+
+          <!-- 9. TreeSet -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai9.html"> TreeSet </a>
+              </h3>
+              <p>Khi "Trật Tự" Là Niềm Đam Mê...</p>
+            </div>
+          </article>
+          <!-- 10. Strings -->
+          <article class="post-item">
+            <div class="p-6">
+              <h3>
+                <a href="bai10.html"> String </a>
+              </h3>
+              <p>Khi "Linh Hồn Của Ứng Dụng 🗣️</p>
+            </div>
+          </article>
+        </div>
+        <!-- Hết grid -->
+      </section>
+    </main>
+
+    <!-- FOOTER: Giữ nguyên HTML, bỏ class Tailwind -->
+    <footer>
+      <p>&copy; Mohamed Alan || kiettuandmx ❤️.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post - Java Data Types</title>
+    <style>
+      /* --- Cài đặt CSS Tối Giản --- */
+
+      /* Cài đặt chung */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #749a9f; /* Màu nền xám rất nhạt */
+        color: #333;
+        line-height: 1.7; /* Tăng khoảng cách dòng cho dễ đọc */
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* Vùng chứa nội dung blog */
+      .blog-container {
+        max-width: 750px; /* Tăng độ rộng một chút cho nội dung dài */
+        width: 100%;
+      }
+
+      /* --- Định dạng "Card" --- */
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Đổ bóng nhẹ nhàng */
+        padding: 28px;
+        margin-bottom: 25px;
+      }
+
+      /* Tiêu đề chính của bài viết (trong card đầu tiên) */
+      .card h1 {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      /* Tiêu đề của mỗi card (mục lớn) */
+      .card h2 {
+        font-size: 1.6rem;
+        color: #007bff; /* Màu xanh dương cho tiêu đề Java */
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* Tiêu đề phụ (như Primitive/Reference) */
+      .card h3 {
+        font-size: 1.3rem;
+        color: #16a085; /* Màu xanh lá */
+        margin-top: 25px;
+      }
+
+      /* Tiêu đề nhỏ hơn (như "Dành cho Con số") */
+      .card h4 {
+        font-size: 1.1rem;
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      /* Định dạng đoạn văn bản */
+      p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      /* Định dạng code inline (tên kiểu dữ liệu) */
+      code {
+        background-color: #e8f4ff; /* Nền xanh nhạt */
+        color: #0056b3; /* Chữ xanh đậm */
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+          Courier, monospace;
+        font-size: 0.95em;
+      }
+
+      /* Định dạng hình ảnh (nếu có) */
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px; /* Bo góc cho ảnh */
+        margin-top: 15px;
+      }
+
+      /* Định dạng cho các ý chính */
+      .highlight {
+        background-color: #fffbeb;
+        padding: 15px;
+        border-left: 4px solid #f0ad4e; /* Viền vàng */
+        border-radius: 4px;
+      }
+      /* --- Nút Quay Lại --- */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 25px; /* Khoảng cách với card đầu tiên */
+        background-color: #2563eb; /* Màu xanh dương */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 8px; /* bo góc */
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-container">
+      <section class="card">
+        <h1>Chào mừng bạn đến với thế giới lập trình Java!</h1>
+        <p>
+          Nếu bạn đang hừng hực ngọn lửa đam mê và sẵn sàng kiến tạo, hãy bắt
+          đầu từ những viên gạch đầu tiên:
+          <strong>Kiểu Dữ Liệu (Data Types)</strong>.
+        </p>
+        <p>
+          Nghe có vẻ "khô khan"? Không hề! Đây chính là nơi phép thuật bắt đầu.
+        </p>
+
+        <h2>Kiểu Dữ Liệu Java: Đừng Chỉ "Học Thuộc", Hãy "Cảm Nhận" Chúng!</h2>
+        <p>
+          Khi bạn viết dòng code đầu tiên, bạn có thể thấy <code>int</code>,
+          <code>String</code>, hay <code>boolean</code>. Đây không phải là những
+          quy tắc nhàm chán. Đây là bộ đồ nghề của bạn, là bảng màu để bạn vẽ
+          nên bức tranh của mình.
+        </p>
+        <p>
+          Hãy tưởng tượng bạn là một kiến trúc sư. Bạn không thể xây một tòa nhà
+          chọc trời chỉ bằng gạch, hay một cây cầu chỉ bằng kính. Bạn cần bê
+          tông, thép, kính, gỗ... mỗi loại vật liệu có một mục đích riêng.
+        </p>
+        <p><strong>Trong Java, Kiểu Dữ Liệu chính là "vật liệu" đó.</strong></p>
+      </section>
+
+      <section class="card">
+        <h2>Gặp Gỡ "Bộ Đồ Nghề" Thiết Yếu Của Bạn</h2>
+        <p>Trong Java, chúng ta có hai nhóm vật liệu chính:</p>
+
+        <h3>1. "Vật Liệu Cốt Lõi" (Primitive Types - 8 Kiểu Nguyên Thủy)</h3>
+        <p>
+          Đây là những viên gạch cơ bản nhất, là linh hồn của dữ liệu. Chúng lưu
+          trữ những giá trị đơn giản nhưng vô cùng mạnh mẽ.
+        </p>
+
+        <h4>Dành cho các Con số (Những viên gạch):</h4>
+        <p>
+          <strong><code>int</code>:</strong> "Người thợ" đa năng nhất. Bạn dùng
+          nó để đếm (từ 1, 2, 3... đến 2 tỷ), để làm ID, để tính điểm số trong
+          game.
+        </p>
+        <p>
+          <strong><code>long</code>:</strong> Khi <code>int</code> không đủ lớn
+          (ví dụ: đếm dân số thế giới hay số giây từ năm 1970).
+        </p>
+        <p>
+          <strong><code>double</code>:</strong> Dành cho sự chính xác. Khi bạn
+          cần tính toán tài chính (1.99$), tọa độ trong game (X=10.5), hay bất
+          cứ thứ gì có dấu phẩy.
+        </p>
+
+        <h4>Dành cho Logic (Công tắc Ánh sáng):</h4>
+        <p>
+          <strong><code>boolean</code>:</strong> Đây là trái tim của mọi quyết
+          định. Nó chỉ có hai trạng thái: <code>true</code> (đúng) hoặc
+          <code>false</code> (sai). "Người chơi còn sống?", "Cửa đã mở?", "Mật
+          khẩu chính xác?"... Tất cả đều là <code>boolean</code>. Làm chủ nó là
+          bạn đang làm chủ luồng đi của chương trình.
+        </p>
+
+        <h4>Dành cho Ký tự (Nguyên tử của Ngôn ngữ):</h4>
+        <p>
+          <strong><code>char</code>:</strong> Một ký tự duy nhất. Chữ 'A', dấu
+          '!', hay số '9'.
+        </p>
+      </section>
+
+      <section class="card">
+        <h3>2. "Những Cấu Trúc Vĩ Đại" (Reference Types - Kiểu Tham Chiếu)</h3>
+        <p>
+          Nếu 8 kiểu trên là gạch, cát, thép... thì kiểu tham chiếu là bản thiết
+          kế của ngôi nhà, chiếc xe, hay cả một thành phố.
+        </p>
+
+        <p>
+          <strong><code>String</code> (Chuỗi):</strong> Đây là "người bạn" bạn
+          sẽ gặp hàng ngày. Nó không phải là kiểu nguyên thủy, mà là một chuỗi
+          các <code>char</code> (ký tự) ghép lại. Tên của bạn ("Nguyễn Văn A"),
+          một thông báo lỗi, hay nội dung của bài post này... đều là
+          <code>String</code>.
+        </p>
+        <p>
+          <strong><code>Arrays</code> (Mảng):</strong> Một "cái khay" để chứa
+          nhiều "vật liệu" cùng loại. Bạn muốn lưu 100 điểm số? Đừng tạo 100
+          biến <code>int</code>, hãy dùng một mảng <code>int[100]</code>.
+        </p>
+        <p>
+          <strong><code>Objects</code> (Đối tượng):</strong> Đây là lúc bạn trở
+          thành "Thượng Đế" thực sự. Bạn tự định nghĩa ra kiểu dữ liệu của riêng
+          mình. Bạn muốn tạo một kiểu dữ liệu <code>Player</code> (Người Chơi)?
+          Bạn quyết định <code>Player</code> sẽ có gì: một
+          <code>String</code> (tên), một <code>int</code> (máu), và một
+          <code>boolean</code> (còn sống).
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Tại Sao Hiểu Chúng Lại Quan Trọng?</h2>
+        <p>
+          Nhiều người mới chỉ "dùng" mà không "hiểu". Họ dùng
+          <code>double</code> cho mọi con số, hay <code>String</code> cho mọi
+          thứ. Nhưng một lập trình viên có đam mê thì khác.
+        </p>
+
+        <div class="highlight">
+          <p>
+            Hiểu Data Types là bạn đang <strong>tôn trọng bộ nhớ</strong>. Bạn
+            sẽ chọn <code>int</code> thay vì <code>long</code> nếu bạn biết con
+            số không bao giờ vượt quá 2 tỷ. Đó là sự hiệu quả.
+          </p>
+          <p>
+            Hiểu Data Types là bạn đang <strong>ngăn ngừa lỗi</strong>. Bạn sẽ
+            không cố cộng một <code>String</code> ("hello") với một
+            <code>int</code> (10) mà không biết chuyện gì đang xảy ra. Đó là sự
+            chính xác.
+          </p>
+        </div>
+
+        <p style="margin-top: 20px">
+          Hiểu Data Types là bước đầu tiên để bạn viết code thanh lịch, dễ đọc
+          và mạnh mẽ.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2 style="color: #28a745; border-color: #f0f0f0">
+          Bắt Đầu Hành Trình Của Bạn
+        </h2>
+        <p>
+          Hành trình vạn dặm bắt đầu từ một bước chân. Hành trình trở thành một
+          kỹ sư phần mềm vĩ đại bắt đầu từ việc làm chủ <code>int</code> và
+          <code>boolean</code>.
+        </p>
+        <p>
+          <strong
+            >Đừng coi thường những viên gạch. Hãy nắm vững chúng, và bạn sẽ sớm
+            xây nên tòa lâu đài của riêng mình.</strong
+          >
+        </p>
+      </section>
+      <a href="DEMO.html" class="back-button">👈 Quay về danh sách</a>
+    </main>
+  </body>
+</html>
