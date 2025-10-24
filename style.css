@@ -8,13 +8,13 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #d6dad8; /* Màu nền xám nhạt */
+  background-color: #4f6c88; /* Màu nền xám nhạt */
   color: #333; /* Màu chữ chính */
 }
 
 /* Phần đầu trang */
 header {
-  background-color: #333;
+  background-color: #2db4dd;
   color: #fff;
   text-align: center;
   padding: 2rem 0;
@@ -69,8 +69,8 @@ ul li {
 
 /* Định dạng cho các liên kết */
 a {
-  color: #007bff;
-  text-decoration: none;
+  color: #333;
+  text-decoration: none !important;
 }
 
 a:hover {
