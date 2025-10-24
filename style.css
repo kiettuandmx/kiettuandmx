@@ -180,9 +180,13 @@ body {
 .navbar a.active::after {
   width: 100%;
 }
+.noidunggioithieu {
+  font-size: 23px;
+}
 
 /*///////////////////////////////////////////////*/
 /* Toàn bộ khu vực chứng chỉ */
+
 .chungchi {
   background-color: white;
   padding: 24px;
