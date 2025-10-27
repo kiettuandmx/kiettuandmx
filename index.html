@@ -15,22 +15,22 @@
       });
     });
   </script> -->
+  <!--  -->
+  <header>
+    <img src="./assets/img/CV.jpg" alt="TUANKIET" class="avatar" />
+    <!-- <img src="CV.jpg" alt="TUANKIET" class="avatar" /> -->
+    <h1>Đinh Nguyễn Tuấn Kiệt</h1>
+    <p>Lập trình viên Web tương lai | Người yêu thích sáng tạo</p>
+  </header>
   <body>
-    <header>
-      <img src="./assets/img/CV.jpg" alt="TUANKIET" class="avatar" />
-      <!-- <img src="CV.jpg" alt="TUANKIET" class="avatar" /> -->
-      <h1>Đinh Nguyễn Tuấn Kiệt</h1>
-      <p>Lập trình viên Web tương lai | Người yêu thích sáng tạo</p>
-    </header>
-
     <!-- Thanh menu -->
     <nav class="navbar">
       <ul>
-        <li><a href="#gioithieu" class="active">Giới Thiệu</a></li>
-        <li><a href="#kynang">Kỹ Năng</a></li>
-        <li><a href="#duan">Dự Án</a></li>
-        <li><a href="#chungchi">Chứng Chỉ</a></li>
-        <li><a href="#lienhe">Liên Hệ Với Tôi</a></li>
+        <li><a href="#gioithieu" class="active">GIỚI THIỆU</a></li>
+        <li><a href="#kynang">KỸ NĂNG</a></li>
+        <li><a href="#duan">DỰ ÁN</a></li>
+        <li><a href="#chungchi">CHỨNG CHỈ</a></li>
+        <li><a href="#lienhe">LIÊN HỆ</a></li>
       </ul>
     </nav>
 
@@ -50,19 +50,53 @@
         <a href="blog.html" class="button-link">Xem Blog của tôi</a>
       </section>
 
+      <!-- Block cha === The cha -->
       <section id="kynang">
+        <!-- Cai title -->
         <h2>💻 Kỹ năng</h2>
-        <ul>
-          <li>C</li>
-          <li>Java</li>
-          <li>HTML5 (đang học)</li>
-          <li>JavaScript (đang học)</li>
-          <li>
+        <!-- Cai list dat theo quy tat BEM -->
+        <ul class="kynang__list">
+          <li class="kynang__list-item">
+            <span>C</span>
+            <img class="kynang__item-img" src="assets/img/C.png" alt="C" />
+          </li>
+          <li class="kynang__list-item">
+            <span>Java</span
+            ><img
+              class="kynang__item-img"
+              src="./assets/img/Java.png"
+              alt="Java"
+            />
+          </li>
+          <li class="kynang__list-item">
+            <span>HTML5 (đang học)</span
+            ><img
+              class="kynang__item-img"
+              src="./assets/img/html5.jpg"
+              alt="HTML5"
+            />
+          </li>
+          <li class="kynang__list-item">
+            <span>JavaScript (đang học)</span
+            ><img
+              class="kynang__item-img"
+              src="./assets/img/javascript.webp"
+              alt="JavaScript"
+            />
+          </li>
+          <li class="kynang__list-item">
+            <span>Duolingo</span>
             <a
+              class="kynang__item-link"
               href="https://www.duolingo.com/profile/kiettuandmx?via=share_profile_qr"
               target="_blank"
-              >Duolingo</a
             >
+              <img
+                class="kynang__item-img"
+                src="assets/img/Duolingo.jpg"
+                alt="Duolingo"
+              />
+            </a>
           </li>
         </ul>
       </section>
@@ -104,9 +138,9 @@
         <div class="project">
           <h3>Blog cá nhân(Môn LTMMT)</h3>
           <p>
-            Tôi thừa nhận tôi chưa thực sự giỏi về lập trình web. Đây chính là
-            dự án đầu tiên của tôi, được xây dựng hoàn toàn bởi HTML và CSS, mục
-            đích là giới thiệu về bản thân và các kỹ năng tôi đang học.
+            Đây chính là dự án đầu tiên của tôi, được xây dựng hoàn toàn bởi
+            HTML và CSS, mục đích là giới thiệu về bản thân và các kỹ năng tôi
+            đang học.
           </p>
         </div>
       </section>

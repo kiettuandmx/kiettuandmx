@@ -14,7 +14,7 @@ body {
 
 /* Phần đầu trang */
 header {
-  background-color: #2db4dd;
+  background-color: #2f4386;
   color: #fff;
   text-align: center;
   padding: 2rem 0;
@@ -82,7 +82,7 @@ footer {
   text-align: center;
   padding: 1px;
   margin-top: 20px;
-  background-color: #777777;
+  background-color: rgb(35, 111, 211);
   color: #ffffff;
 }
 /* CSS cho trang blog */
@@ -245,4 +245,20 @@ body {
   padding: 12px;
   font-weight: 500;
   color: #444;
+}
+
+.kynang__list-item {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.kynang__list-item .kynang__item-img {
+  height: 100%;
+  /* width: 100%; */
+}
+
+.kynang__list-item .kynang__item-link {
+  height: 100%;
 }
